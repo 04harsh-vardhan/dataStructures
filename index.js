@@ -25,7 +25,43 @@ class MinHeap {
     this.arrLength += 1;
   }
   remove() {
-    
+    if (this.arr.length === 0) {
+      return -1;
+    }
+    const top = this.arr[0];
+    this.arr[0] = this.arr[this.arr.length - 1];
+    this.arr.pop();
+    let currIndex = 0;
+    let totalSize = this.arr.length;
+    while (currIndex < totalSize) {
+      let leftChild = 2 * currIndex + 1;
+      let rightChild = 2 * currIndex + 2;
+      if (totalSize <= leftChild) {
+        break;
+      } else if (totalSize > leftChild && totalSize <= rightChild) {
+        if (this.arr[currIndex] > this.arr[leftChild]) {
+          this.swap(currIndex, leftChild);
+        }
+        break;
+      } else {
+        if (this.arr[leftChild] <= this.arr[rightChild]) {
+          if (this.arr[currIndex] > this.arr[leftChild]) {
+            this.swap(currIndex, leftChild);
+            currIndex = leftChild;
+          } else {
+            break;
+          }
+        } else {
+          if (this.arr[currIndex] > this.arr[rightChild]) {
+            this.swap(currIndex, rightChild);
+            currIndex = rightChild;
+          } else {
+            break;
+          }
+        }
+      }
+    }
+    return top;
   }
   printHeap() {
     return this.arr;
@@ -33,9 +69,3 @@ class MinHeap {
 }
 
 module.exports = MinHeap;
-
-// let heap = new MinHeap();
-// heap.insert(2);
-// heap.insert(5);
-// heap.insert(1);
-// heap.printHeap();

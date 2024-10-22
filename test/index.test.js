@@ -3,6 +3,7 @@ const MinHeap = require("../index");
 
 const data = require("./insert.json");
 const removeJson = require("./remove.json");
+
 describe("Insert function test", () => {
   let heap;
   beforeEach(() => {
@@ -26,11 +27,10 @@ describe("remove function test", () => {
   });
   removeJson.testCases.forEach((testcase) => {
     it(testcase.description, () => {
-      heap.arr = testcase.input
-      heap.arrLength = testcase.input
-      heap.remove()
-      assert.deepEqual(heap.printHeap(),testcase.expected)
+      heap.arr = testcase.input;
+      heap.arrLength = testcase.input;
+      heap.remove();
+      assert.deepEqual(heap.printHeap(), testcase.expected);
     });
-    
   });
 });
