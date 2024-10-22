@@ -1,7 +1,6 @@
 class MinHeap {
   constructor() {
     this.arr = [];
-    this.arrLength = 0;
   }
   swap(i, j) {
     let temp = this.arr[i];
@@ -9,9 +8,8 @@ class MinHeap {
     this.arr[j] = temp;
   }
   insert(element) {
-    let newIndex = this.arrLength;
-    this.arr[newIndex] = element;
-    let currIndex = newIndex;
+    this.arr.push(element);
+    let currIndex = this.arr.length - 1;
     while (currIndex > 0) {
       let parentIndex = Math.floor((currIndex - 1) / 2);
       if (this.arr[parentIndex] > this.arr[currIndex]) {
@@ -22,7 +20,6 @@ class MinHeap {
         break;
       }
     }
-    this.arrLength += 1;
   }
   remove() {
     if (this.arr.length === 0) {

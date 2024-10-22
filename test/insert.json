@@ -1,40 +1,39 @@
 {
-    "testCases": [
-      {
-        "description": "Insert 5 into an empty heap",
-        "input": [5],
-        "expected": [5]
-      },
-      {
-        "description": "Insert 3, 5 into an empty heap",
-        "input": [3, 5],
-        "expected": [3, 5]
-      },
-      {
-        "description": "Insert 3, 5, 2 into an empty heap",
-        "input": [3, 5, 2],
-        "expected": [2, 5, 3]
-      },
-      {
-        "description": "Insert 2, 3, 5, 10 into an empty heap",
-        "input": [2, 3, 5, 10],
-        "expected": [2, 3, 5, 10]
-      },
-      {
-        "description": "Insert 2, 3, 5, 10, 4 into an empty heap",
-        "input": [2, 3, 5, 10, 4],
-        "expected": [2, 3, 5, 10, 4]
-      },
-      {
-        "description": "Insert 3, 3, 5, 2 into an empty heap",
-        "input": [3, 3, 5, 2],
-        "expected": [2, 3, 5, 3]
-      },
-      {
-        "description": "Insert 10 into an empty heap",
-        "input": [10],
-        "expected": [10]
-      }
-    ]
-  }
-  
+  "testCases": [
+    {
+      "description": "Insert 5 into an empty heap",
+      "input": [5],
+      "expected": [5]
+    },
+    {
+      "description": "Insert 3, 5 into an empty heap",
+      "input": [3, 5],
+      "expected": [3, 5]
+    },
+    {
+      "description": "Insert 3, 5, 2 into an empty heap",
+      "input": [3, 5, 2],
+      "expected": [2, 5, 3]
+    },
+    {
+      "description": "Insert 2, 3, 5, 10 into an empty heap",
+      "input": [2, 3, 5, 10],
+      "expected": [2, 3, 5, 10]
+    },
+    {
+      "description": "Insert 2, 3, 5, 10, 4 into an empty heap",
+      "input": [2, 3, 5, 10, 4],
+      "expected": [2, 3, 5, 10, 4]
+    },
+    {
+      "description": "Insert 3, 3, 5, 2 into an empty heap",
+      "input": [3, 3, 5, 2],
+      "expected": [2, 3, 5, 3]
+    },
+    {
+      "description": "Insert 10 into an empty heap",
+      "input": [10],
+      "expected": [10]
+    }
+  ]
+}
